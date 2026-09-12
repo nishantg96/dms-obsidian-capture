@@ -1,0 +1,24 @@
+{
+  "$schema": "https://github.com/AvengeMedia/DankMaterialShell/raw/refs/heads/master/PLUGINS/plugin-schema.json",
+  "id": "dmsVault",
+  "name": "Vault Capture",
+  "description": "Capture a note or task into today's daily note, from anywhere.",
+  "version": "2.0.0",
+  "license": "MIT",
+  "author": "Nishant Gajjar",
+  "icon": "edit_note",
+  "type": "composite",
+  "capabilities": [
+    "daemon"
+  ],
+  "components": {
+    "daemon": "./DmsVaultDaemon.qml"
+  },
+  "settings": "./DmsVaultSettings.qml",
+  "requires_dms": ">=1.6.0",
+  "requires": [],
+  "permissions": [
+    "settings_read",
+    "settings_write"
+  ]
+}
