@@ -1,20 +1,22 @@
 {
   "$schema": "https://github.com/AvengeMedia/DankMaterialShell/raw/refs/heads/master/PLUGINS/plugin-schema.json",
-  "id": "dmsVault",
-  "name": "Vault Capture",
-  "description": "Capture a note or task into today's daily note, from anywhere.",
-  "version": "2.0.0",
+  "id": "obsidianCapture",
+  "name": "Obsidian Capture",
+  "description": "Capture a note or task into today's daily note from anywhere. Built for Obsidian; works with any folder of Markdown files.",
+  "version": "3.0.0",
   "license": "MIT",
   "author": "Nishant Gajjar",
   "icon": "edit_note",
   "type": "composite",
   "capabilities": [
-    "daemon"
+    "daemon",
+    "dankbar-widget"
   ],
   "components": {
-    "daemon": "./DmsVaultDaemon.qml"
+    "daemon": "./ObsidianCaptureDaemon.qml",
+    "widget": "./ObsidianCaptureWidget.qml"
   },
-  "settings": "./DmsVaultSettings.qml",
+  "settings": "./ObsidianCaptureSettings.qml",
   "requires_dms": ">=1.6.0",
   "requires": [],
   "permissions": [

@@ -8,15 +8,15 @@ import qs.Modals.Common
 
 // Capture a note or a task into today's daily note.
 //
-//   dms ipc call dmsVault note
-//   dms ipc call dmsVault task
+//   dms ipc call obsidianCapture note
+//   dms ipc call obsidianCapture task
 //
 // Fully self-contained: reads and writes the daily note itself through
 // FileView with atomicWrites, so there is no external script to install.
 PluginComponent {
     id: root
 
-    pluginId: "dmsVault"
+    pluginId: "obsidianCapture"
     pluginService: PluginService
 
     property string mode: "note"
@@ -118,7 +118,7 @@ PluginComponent {
     }
 
     IpcHandler {
-        target: "dmsVault"
+        target: "obsidianCapture"
         enabled: true
 
         function note(): string {
@@ -137,7 +137,7 @@ PluginComponent {
         }
 
         // Scriptable capture with no UI — the CLI path, natively:
-        //   dms ipc call dmsVault add task "send Eric the dataset tool"
+        //   dms ipc call obsidianCapture add task "send Eric the dataset tool"
         function add(kind: string, text: string): string {
             if (kind !== "note" && kind !== "task")
                 return "ERROR: kind must be note or task";

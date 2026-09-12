@@ -12,7 +12,7 @@ import qs.Modules.Plugins
 // through FileView, so there is nothing external to install or configure.
 PluginSettings {
     id: root
-    pluginId: "dmsVault"
+    pluginId: "obsidianCapture"
 
     StyledText {
         text: "Vault"
@@ -130,21 +130,21 @@ PluginSettings {
 
     CopyBox {
         label: "Capture a note"
-        text: "dms ipc call dmsVault note"
+        text: "dms ipc call obsidianCapture note"
     }
 
     CopyBox {
         label: "Capture a task"
-        text: "dms ipc call dmsVault task"
+        text: "dms ipc call obsidianCapture task"
     }
 
     CopyBox {
         label: "niri bind — note"
-        text: "Mod+Ctrl+N hotkey-overlay-title=\"Vault: Note\" { spawn \"dms\" \"ipc\" \"call\" \"dmsVault\" \"note\"; }"
+        text: "Mod+Ctrl+N hotkey-overlay-title=\"Vault: Note\" { spawn \"dms\" \"ipc\" \"call\" \"obsidianCapture\" \"note\"; }"
     }
 
     CopyBox {
         label: "niri bind — task"
-        text: "Mod+Ctrl+T hotkey-overlay-title=\"Vault: Task\" { spawn \"dms\" \"ipc\" \"call\" \"dmsVault\" \"task\"; }"
+        text: "Mod+Ctrl+T hotkey-overlay-title=\"Vault: Task\" { spawn \"dms\" \"ipc\" \"call\" \"obsidianCapture\" \"task\"; }"
     }
 }
