@@ -33,8 +33,8 @@ Nothing is bound by default. For niri:
 
 ```kdl
 binds {
-    Mod+Ctrl+N hotkey-overlay-title="Vault: Note" { spawn "dms" "ipc" "call" "obsidianCapture" "note"; }
-    Mod+Ctrl+T hotkey-overlay-title="Vault: Task" { spawn "dms" "ipc" "call" "obsidianCapture" "task"; }
+    Mod+Ctrl+N hotkey-overlay-title="Obsidian: Note" { spawn "dms" "ipc" "call" "obsidianCapture" "note"; }
+    Mod+Ctrl+T hotkey-overlay-title="Obsidian: Task" { spawn "dms" "ipc" "call" "obsidianCapture" "task"; }
 }
 ```
 
